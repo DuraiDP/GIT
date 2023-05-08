@@ -17,8 +17,12 @@ public class D {
 		Thread.sleep(5000);
 		driver.get("https://www.flipkart.com/");
 		Thread.sleep(3000);
-		WebElement closeBtn = driver.findElement(By.className("//button[@class='_2KpZ6l _2doB4z']"));
+		WebElement closeBtn = driver.findElement(By.xpath("//button[@class='_2KpZ6l _2doB4z']"));
 		closeBtn.click();
+		WebElement searchTxtBar = driver.findElement(By.className("_3704LK"));
+		searchTxtBar.sendKeys("iPhone");
+		WebElement searchBarBtn = driver.findElement(By.className("L0Z3Pu"));
+		searchBarBtn.click();
 
 		Thread.sleep(3000);
 		driver.quit();
